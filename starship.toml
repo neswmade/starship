@@ -1,0 +1,119 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+ $username\
+ $directory\
+ $git_branch\
+ $git_status\
+ $c\
+ $rust\
+ $golang\
+ $nodejs\
+ $php\
+ $java\
+ $kotlin\
+ $haskell\
+ $python\
+ $lua\
+ $docker_context\
+ $character"""
+
+add_newline = false
+
+# username module
+[username]
+show_always = true
+style_user = "bright-yellow"
+style_root = "purple"
+format = '[$user ]($style)'
+
+# directory module
+[directory]
+style = "blue"
+format = '[$path]($style) '
+truncation_length = 3
+truncation_symbol = "…/"
+
+# git branch module
+[git_branch]
+style = "bright-blue"
+format = '[$branch ]($style)'
+
+# git status module
+[git_status]
+style = "bright-blue"
+format = '[($all_status$ahead_behind )]($style)'
+
+# nodejs module
+[nodejs]
+symbol = "󰎙"
+style = "bright-green"
+format = '[$symbol( $version)]($style) '
+
+# c module
+[c]
+symbol = ""
+style = "white"
+format = '[$symbol( $version)]($style) '
+
+# rust module
+[rust]
+symbol = ""
+style = "red"
+format = '[$symbol( $version)]($style) '
+
+# go module
+[golang]
+symbol = "󰟓"
+style = "cyan"
+format = '[$symbol( $version)]($style) '
+
+# php module
+[php]
+symbol = "󰌟"
+style = "purple"
+format = '[$symbol( $version)]($style) '
+
+# java module
+[java]
+symbol = ""
+style = "yellow"
+format = '[$symbol( $version)]($style) '
+
+# kotlin module
+[kotlin]
+symbol = ""
+style = "bright-purple"
+format = '[$symbol( $version)]($style) '
+
+# haskell module
+[haskell]
+symbol = ""
+style = "magenta"
+format = '[$symbol( $version)]($style) '
+
+# python module
+[python]
+symbol = ""
+style = "bright-yellow"
+format = '[$symbol( $version)]($style) '
+
+# lua module
+[lua]
+symbol = "󰢱"
+style = "bright-yellow"
+format = '[$symbol( $version)]($style) '
+
+# docker context module
+[docker_context]
+symbol = "󰡨"
+style = "blue"
+format = '[$symbol$context]($style) '
+
+# line break module
+[line_break]
+disabled = true
+
+# character module
+[character]
+format = "[](bright-blue) "
