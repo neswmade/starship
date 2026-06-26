@@ -20,100 +20,100 @@ $character"""
 
 add_newline = false
 
-# username module
+# username
 [username]
 show_always = true
 style_user = "bright-yellow"
 style_root = "purple"
 format = '[$user ]($style)'
 
-# directory module
+# directory
 [directory]
 style = "blue"
 format = '[$path]($style) '
 truncation_length = 3
 truncation_symbol = "…/"
 
-# git branch module
+# git branch
 [git_branch]
 style = "bright-blue"
 format = '[$branch ]($style)'
 
-# git status module
+# git status
 [git_status]
 style = "bright-blue"
 format = '[($all_status$ahead_behind )]($style)'
 
-# nodejs module
+# nodejs
 [nodejs]
 symbol = "󰎙"
 style = "bright-green"
 format = '[$symbol( $version)]($style) '
 
-# c module
+# c
 [c]
 symbol = ""
 style = "white"
 format = '[$symbol( $version)]($style) '
 
-# rust module
+# rust
 [rust]
 symbol = ""
 style = "red"
 format = '[$symbol( $version)]($style) '
 
-# go module
+# go
 [golang]
 symbol = "󰟓"
 style = "cyan"
 format = '[$symbol( $version)]($style) '
 
-# php module
+# php
 [php]
 symbol = "󰌟"
 style = "purple"
 format = '[$symbol( $version)]($style) '
 
-# java module
+# java
 [java]
 symbol = ""
 style = "yellow"
 format = '[$symbol( $version)]($style) '
 
-# kotlin module
+# kotlin
 [kotlin]
 symbol = ""
 style = "bright-purple"
 format = '[$symbol( $version)]($style) '
 
-# haskell module
+# haskell
 [haskell]
 symbol = ""
 style = "magenta"
 format = '[$symbol( $version)]($style) '
 
-# python module
+# python
 [python]
 symbol = ""
 style = "bright-yellow"
 format = '[$symbol( $version)]($style) '
 
-# lua module
+# lua
 [lua]
 symbol = "󰢱"
 style = "bright-yellow"
 format = '[$symbol( $version)]($style) '
 
-# docker context module
+# docker
 [docker_context]
 symbol = "󰡨"
 style = "blue"
 format = '[$symbol$context]($style) '
 
-# line break module
+# line break 
 [line_break]
 disabled = true
 
-# character module
+# character
 [character]
 format = "[](bright-blue) "
