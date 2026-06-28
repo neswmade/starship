@@ -1,5 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# layout
 format = """
 $username\
 $directory\
@@ -18,102 +19,100 @@ $lua\
 $docker_context\
 $character"""
 
+# right aligned
+right_format = '$cmd_duration'
+
 add_newline = false
+scan_timeout = 10
 
 # username
 [username]
 show_always = true
-style_user = "bright-yellow"
-style_root = "purple"
+style_user = "bold #bcbcbc"
+style_root = "#ff2e3f"
 format = '[$user ]($style)'
 
 # directory
 [directory]
-style = "blue"
+style = "bold #009fff"
 format = '[$path]($style) '
 truncation_length = 3
-truncation_symbol = "…/"
+truncation_symbol = '…/'
 
 # git branch
 [git_branch]
-style = "bright-blue"
+style = "italic #08c0ef"
 format = '[$branch ]($style)'
 
 # git status
 [git_status]
-style = "bright-blue"
+style = "#08c0ef"
 format = '[($all_status$ahead_behind )]($style)'
 
-# nodejs
-[nodejs]
-symbol = "󰎙"
-style = "bright-green"
-format = '[$symbol( $version)]($style) '
-
-# c
+# languages
 [c]
 symbol = ""
-style = "white"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# rust
 [rust]
 symbol = ""
-style = "red"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# go
 [golang]
 symbol = "󰟓"
-style = "cyan"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# php
+[nodejs]
+symbol = "󰎙"
+style = "dimmed"
+format = '[$symbol( $version)]($style) '
+
 [php]
 symbol = "󰌟"
-style = "purple"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# java
 [java]
 symbol = ""
-style = "yellow"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# kotlin
 [kotlin]
 symbol = ""
-style = "bright-purple"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# haskell
 [haskell]
 symbol = ""
-style = "magenta"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# python
 [python]
 symbol = ""
-style = "bright-yellow"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
-# lua
 [lua]
 symbol = "󰢱"
-style = "bright-yellow"
+style = "dimmed"
 format = '[$symbol( $version)]($style) '
 
 # docker
 [docker_context]
 symbol = "󰡨"
-style = "blue"
+style = "dimmed"
 format = '[$symbol$context]($style) '
-
-# line break 
-[line_break]
-disabled = true
 
 # character
 [character]
-format = "[](bright-blue) "
+success_symbol  = '[](#009fff)'
+error_symbol = '[](#ff2e3f)'
+
+# command duration
+[cmd_duration]
+min_time = 2000
+format = '[ $duration ](dimmed)'
+show_milliseconds = false
